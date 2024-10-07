@@ -6,7 +6,7 @@ const BannerPie = () => {
     <div>
       {/* Banner */}
       <header className="banner">
-        <img src="/logo.png" alt="logo" className="logo" />
+        <img src="/logo2.png" alt="logo" className="logo" />
         <div className="banner-text">
           <h1 className="banner-title">Abogado y Notario</h1>
           <h2 className="banner-subtitle">Licenciado Dario López</h2>
