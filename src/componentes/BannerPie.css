@@ -75,30 +75,3 @@
   right: 0; /* Alinear al lado derecho */
   width: 100%; /* Asegura que ocupe todo el ancho */
 }
-
-  .logo {
-    width: 40px; /* Tamaño aún más pequeño del logo en móviles */
-    margin-bottom: 10px; /* Espacio debajo del logo */
-  }
-
-  .banner-title {
-    font-size: 14px; /* Tamaño más pequeño del título */
-  }
-
-  .banner-subtitle {
-    font-size: 10px; /* Tamaño más pequeño del subtítulo */
-  }
-
-  .menu {
-    flex-direction: column; /* Los enlaces del menú se apilan verticalmente en pantallas pequeñas */
-    margin-left: 0;
-    width: 100%; /* Asegura que los enlaces ocupen todo el ancho disponible */
-  }
-
-  .menu a {
-    font-size: 14px; /* Tamaño de fuente más pequeño para los enlaces */
-    margin: 5px 0; /* Margen reducido entre enlaces */
-    text-align: left; /* Alineación a la izquierda para mejor lectura */
-    width: 100%; /* Cada enlace ocupará todo el ancho disponible */
-    padding: 10px; /* Mayor espaciado interno para facilitar la interacción en pantallas táctiles */
-  }
