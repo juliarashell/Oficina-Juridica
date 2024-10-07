@@ -20,11 +20,12 @@
   z-index: 1000;
 }
 
-/* Logo */
 .logo {
-  width: 70px;
-  height: auto;
-  margin-right: 10px;
+  width: 70px; /* Ajusta según el tamaño que deseas */
+  height: auto; /* Mantiene la proporción correcta */
+  display: block; /* Asegura que se muestre como bloque */
+  visibility: visible; /* Asegúrate de que no esté oculto */
+  opacity: 1; /* Asegura que no esté transparente */
 }
 
 .banner-title {
