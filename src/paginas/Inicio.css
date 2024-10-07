@@ -48,6 +48,11 @@ body {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Cambiar la tipografía */
   font-size: 50px; /* Tamaño de fuente del título */
 }
+@media (max-width: 768px) {
+  .inicio-titulo {
+    font-size: 30px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+}
 
 /* Estilos para el lema */
 .inicio-lema {
@@ -56,6 +61,11 @@ body {
   margin: 5px 0; /* Reducido para ajustar el espacio */
   font-family: 'Georgia', serif; /* Cambiar la tipografía */
   font-size: 22px; /* Tamaño de fuente del lema */
+}
+@media (max-width: 768px) {
+  .inicio-lema {
+    font-size: 20px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
 }
 
 /* Estilo para quitar viñetas de los objetivos y valores */

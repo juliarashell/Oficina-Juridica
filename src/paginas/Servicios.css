@@ -7,6 +7,11 @@
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Cambiar la tipografía */
   font-size: 50px; /* Tamaño de fuente del título */
 }
+@media (max-width: 768px) {
+  .services-titulo {
+    font-size: 30px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+}
 
 /* El contenedor para los servicios */
 .services-container {
