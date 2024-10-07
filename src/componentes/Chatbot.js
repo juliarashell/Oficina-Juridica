@@ -54,7 +54,7 @@ const Chatbot = () => {
         );
         break;
       case 'Asesoría legal para empresas 💼':
-        enviarMensajeBot('Ofrecemos consultorías legales personalizadas para empresas en cumplimiento normativo. Para más información comunícate con nosotros::');
+        enviarMensajeBot('Ofrecemos consultorías legales personalizadas para empresas en cumplimiento normativo. Para más información comunícate con nosotros: ');
         enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20información%20sobre%20la%20asesoría%20legal%20para%20empresas">Haz clic aquí para contactarnos por WhatsApp</a>');
         break;
       default:
