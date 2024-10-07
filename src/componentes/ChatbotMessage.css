@@ -83,8 +83,8 @@
 
 @media (max-width: 600px) {
   .chatbot-message {
-    bottom: 20px; /* Ajustar la posición inferior */
-    right: 20px;  /* Ajustar la posición derecha */
+    bottom: 50px; /* Ajustar la posición inferior */
+    right: 100px;  /* Ajustar la posición derecha */
     padding: 8px 12px; /* Ajustar el padding para pantallas pequeñas */
     font-size: 14px; /* Reducir el tamaño del texto */
     width: auto; /* Asegurar que no se desborde */
