@@ -76,35 +76,36 @@
   width: 100%;
 }
 
-/* Estilos para pantallas más pequeñas (dispositivos móviles) */
 @media (max-width: 768px) {
   .banner {
     padding: 0.5rem;
-    height: 60px;
+    height: auto; /* Permite que el banner crezca si es necesario */
+    flex-direction: column; /* Coloca el contenido del banner en columna para ahorrar espacio */
+    align-items: center; /* Centra el contenido del banner */
+    text-align: center; /* Centra el texto dentro del banner */
   }
 
   .logo {
     width: 50px;
-    margin-right: 5px;
+    margin-bottom: 5px; /* Añade algo de espacio debajo del logo */
   }
 
   .banner-title {
-    font-size: 14px;
+    font-size: 16px; /* Reduce el tamaño del título */
   }
 
   .banner-subtitle {
-    font-size: 12px;
+    font-size: 12px; /* Reduce el tamaño del subtítulo */
   }
 
   .menu {
-    margin-left: auto; /* Mantén el menú a la derecha */
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px; /* Ajusta el espacio entre los enlaces */
+    flex-direction: row; /* Mantiene el menú en fila */
+    margin-top: 10px; /* Añade algo de espacio entre el menú y el subtítulo */
   }
 
   .menu a {
     font-size: 14px;
-    padding: 5px 8px; /* Reduce el tamaño del padding */
+    padding: 5px 8px;
   }
 }
+
