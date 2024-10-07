@@ -21,7 +21,7 @@ const Servicios = () => {
           </div>
           <div className="service-box">
             <h2>Notariales</h2>
-            <p>Escrituras públicas, contratos, matrimonios, actas notariales, documentos auténticos.</p>
+            <p>Escrituras públicas, contratos, matrimonios, actas notariales, auténtica de documentos y más.</p>
           </div>
           <div className="service-box">
             <h2>Asesorías Legales</h2>

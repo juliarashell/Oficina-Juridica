@@ -39,7 +39,7 @@ const Chatbot = () => {
         enviarMensajeBot('Nuestro horario de atención es de lunes a viernes de 8:00 am a 5:00 pm, y sábados de 8:00 am a 1:00 pm.');
         break;
       case 'Servicios notariales ⚖️':
-        enviarMensajeBot('Ofrecemos servicios notariales como autenticación de documentos, escrituras públicas, contratos y más. Para más información comunícate con nosotros por WhatsApp:');
+        enviarMensajeBot('Ofrecemos servicios notariales como auténtica de documentos, escrituras públicas, contratos y más. Para más información comunícate con nosotros por WhatsApp:');
         enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20información%20sobre%20los%20servicios%20notariales">Haz clic aquí para contactarnos por WhatsApp</a>');
         break;
       case 'Agendar cita 🗓️':

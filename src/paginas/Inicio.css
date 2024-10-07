@@ -64,7 +64,7 @@ body {
 }
 @media (max-width: 768px) {
   .inicio-lema {
-    font-size: 20px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    font-size: 18px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
   }
 }
 
