@@ -51,9 +51,14 @@ body {
 @media (max-width: 768px) {
   .inicio-titulo {
     font-size: 30px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
-    margin-top: 1cm;
   }
 }
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 150px; /* Ajusta este valor para móviles si el banner es más alto en pantallas pequeñas */
+  }
+}
+
 
 /* Estilos para el lema */
 .inicio-lema {
