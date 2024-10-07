@@ -77,6 +77,7 @@
   width: 100%;
 }
 
+/* Para dispositivos móviles */
 @media (max-width: 768px) {
   .banner {
     padding: 0.5rem;
@@ -87,7 +88,7 @@
   }
 
   .logo {
-    width: 70px;
+    width: 100px; /* Aumenta el tamaño del logo en móviles */
     margin-bottom: 8px; /* Añade algo de espacio debajo del logo */
   }
 
@@ -112,4 +113,9 @@
     margin-left: 15px; /* Ajusta el espacio entre los enlaces */
     margin-right: 15px; /* Ajusta el espacio entre los enlaces */
   }
+}
+
+/* Para evitar que el contenido del banner tape los títulos de la página */
+.main-content {
+  padding-top: 120px; /* Ajusta este valor según el tamaño del banner para evitar solapamiento */
 }
