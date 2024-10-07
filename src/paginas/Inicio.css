@@ -64,22 +64,3 @@ ul {
   padding-left: 0; /* Eliminar espacio a la izquierda */
 }
 
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-  .info-box {
-    flex: 1 1 calc(100% - 20px); /* Las cajas ocupan el 100% del ancho */
-    margin: 10px 0; /* Reduce el margen entre las cajas */
-  }
-
-  .inicio-titulo {
-    font-size: 30px; /* Ajusta el tamaño de fuente para el título en móvil */
-  }
-
-  .inicio-lema {
-    font-size: 18px; /* Ajusta el tamaño de fuente para el lema en móvil */
-  }
-
-  .main-content {
-    padding-top: 80px; /* Reduce el padding en móvil para más espacio */
-  }
-}
