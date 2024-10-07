@@ -99,13 +99,16 @@
   }
 
   .menu {
-    flex-direction: row; /* Mantiene el menú en fila */
-    margin-top: 10px; /* Añade algo de espacio entre el menú y el subtítulo */
+    display: flex;
+    justify-content: center; /* Centra los enlaces en la pantalla */
+    margin-top: 10px;
+    width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
   }
 
   .menu a {
     font-size: 14px;
     padding: 5px 8px;
+    margin-left: 15px; /* Ajusta el espacio entre los enlaces */
+    margin-right: 15px; /* Ajusta el espacio entre los enlaces */
   }
 }
-
