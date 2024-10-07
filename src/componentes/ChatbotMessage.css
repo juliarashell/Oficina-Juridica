@@ -1,0 +1,92 @@
+/* Estilos del mensaje emergente del chatbot */
+.chatbot-message {
+  position: absolute; /* Cambia relative por absolute para más control */
+  bottom: 50px; /* Ajusta el valor */
+  right: 100px; /* Ajusta el valor */
+  background-color: #fff;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+  border: 1px solid #84fdf9cf;
+  justify-content: space-between; /* Para asegurar que el texto y el botón de cerrar se separen */
+  
+}
+
+/* Colita del mensaje (abajo a la derecha) */
+.chatbot-message::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border-width: 10px 0 0 10px;
+  border-style: solid;
+  border-color: #84fdf9cf transparent transparent transparent;
+}
+
+/* Estilos del botón "X" */
+.close-button {
+  background-color: #000000; /* Rojo claro para que parezca un botón */
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50%; /* Hace que sea un botón redondo */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: -10px; /* Posiciona el botón fuera del mensaje */
+  right: -10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltarlo */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.close-button:hover {
+  color: red; /* Cambia el color al pasar el mouse */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilos para las variaciones del mensaje según la página */
+.chatbot-message.inicio {
+  background-color: #84fdf9cf;
+  color: black;
+}
+
+.chatbot-message.servicios {
+  background-color: #84fdf9cf;
+  color: black;
+}
+
+.chatbot-message.contacto {
+  background-color: #84fdf9cf;
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .chatbot-message {
+    bottom: 20px; /* Ajustar la posición inferior */
+    right: 20px;  /* Ajustar la posición derecha */
+    padding: 8px 12px; /* Ajustar el padding para pantallas pequeñas */
+    font-size: 14px; /* Reducir el tamaño del texto */
+    width: auto; /* Asegurar que no se desborde */
+  }
+}

@@ -1,0 +1,195 @@
+/* Estilos generales del chatbot */
+.boton-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.boton-chat img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.boton-chat:hover img {
+  transform: scale(1.1);
+}
+
+/* Estilos de la ventana del chatbot */
+.ventana-chat {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 350px;
+  height: 400px; 
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabecera del chat */
+.chat-header {
+  background-color: #02a895;
+  color: white;
+  padding: 10px;
+  display: flex; 
+  font-style: italic;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-header h3 {
+  margin: 0;
+}
+
+.chatbot-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.cerrar-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.cerrar-chat:hover {
+  color: rgb(19, 19, 19);
+}
+
+
+/* Cuerpo del chat, permite scroll al exceder altura */
+.chat-body {
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilos de los mensajes */
+.mensaje {
+  display: flex;
+  margin: 5px 0;
+  position: relative;
+}
+
+.mensaje.bot {
+  justify-content: flex-start;
+}
+
+.mensaje.usuario {
+  justify-content: flex-end;
+}
+
+/* Estilos para los mensajes del bot */
+.mensaje.bot p {
+  background-color: #baccd799;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 80%;
+  margin: 0;
+  position: relative;
+  color: #000000;
+}
+
+/* Colita del mensaje del bot (parte inferior izquierda) */
+.mensaje.bot p::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px; /* Puedes ajustar este valor para mover el triángulo a la izquierda o a la derecha */
+  border-width: 10px 10px 0 0;/* Ajusta el ancho del borde derecho a 5px para mostrar solo la mitad */
+  border-style: solid;
+  border-color: #baccd799 transparent transparent transparent;
+  margin-top: 0;
+}
+
+/* Estilos para los mensajes del usuario */
+.mensaje.usuario p {
+  background-color: #a5daffd9;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 80%;
+  margin: 0;
+  position: relative;
+  color: #000000;
+}
+
+/* Colita del mensaje del usuario (parte inferior derecha) */
+.mensaje.usuario p::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border-width: 10px 0 0 10px;
+  border-style: solid;
+  border-color: #d3e7ff transparent transparent transparent;
+  margin:0px;
+}
+
+/* Estilos para el mensaje "escribiendo..." */
+.mensaje.bot.escribiendo p {
+  font-style: italic;
+}
+
+/* Estilos para la lista de opciones */
+.opciones-chat {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opciones-chat li {
+  background-color: #baccd799; /* Color como el del mensaje del bot */
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.opciones-chat li:hover {
+  background-color: #a5daffd9;
+}
+
+.finalizar-chat {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.finalizar-chat button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.finalizar-chat button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.finalizar-chat button:active {
+  transform: scale(0.95);
+}

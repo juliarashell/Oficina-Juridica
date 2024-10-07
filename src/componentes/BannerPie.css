@@ -1,0 +1,112 @@
+/* Reseteo de márgenes y paddings */
+* {
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina paddings por defecto */
+  box-sizing: border-box; /* Asegura que el padding y los bordes se incluyan en el ancho y alto */
+}
+
+/* Estilos del encabezado */
+.banner {
+  display: flex; /* Usar flexbox para alinear los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: flex-start; /* Alinea el logo, título y menú hacia la izquierda */
+  background-color: rgba(0, 0, 0, 0.521); /* Color de fondo del banner */
+  padding: 1rem; /* Espaciado interno */
+  height: 80px; /* Altura del banner */
+  width: 100vw; /* Asegura que el encabezado ocupe todo el ancho de la ventana */
+  position: fixed; /* Mantiene el banner fijo en la parte superior */
+  top: 0; /* Alineación completa a la parte superior */
+  left: 0; /* Alineación completa a la izquierda */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Logo */
+.logo {
+  width: 70px; /* Ajusta el tamaño del logo según sea necesario */
+  height: auto; /* Mantiene la proporción */
+  margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+.banner-title {
+  font-size: 18px;
+  color: white; /* Color del texto */
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner-subtitle {
+  font-size: 14px;
+  color: white; /* Color del texto */
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Navegación */
+.menu {
+  display: flex; /* Alinea los enlaces en fila */
+  margin-left: auto; /* Empuja la navegación a la derecha */
+}
+
+.menu a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  margin-left: 30px; /* Espacio entre los elementos del menú */
+  padding: 5px 10px; /* Espaciado interno para un botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Color de fondo al pasar el mouse */
+  color: #ffffff; /* Color del texto al pasar el mouse */
+}
+
+/* Estilos del pie de página */
+.pie-pagina {
+  background-color: rgba(0, 0, 0, 0.521); /* Color de fondo */
+  color: white; /* Color del texto */
+  font-size: 10px;
+  text-align: center; /* Centrar el texto */
+  padding: 0.2rem; /* Espaciado interno */
+  position: fixed; /* Mantener en la parte inferior */
+  bottom: 0; /* Alinear al fondo */
+  left: 0; /* Alinear al lado izquierdo */
+  right: 0; /* Alinear al lado derecho */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* Cambia la orientación a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    height: auto; /* Permite que el banner se ajuste a su contenido */
+  }
+
+  .logo {
+    width: 40px; /* Tamaño aún más pequeño del logo en móviles */
+    margin-bottom: 10px; /* Espacio debajo del logo */
+  }
+
+  .banner-title {
+    font-size: 14px; /* Tamaño más pequeño del título */
+  }
+
+  .banner-subtitle {
+    font-size: 10px; /* Tamaño más pequeño del subtítulo */
+  }
+
+  .menu {
+    flex-direction: column; /* Los enlaces del menú se apilan verticalmente en pantallas pequeñas */
+    margin-left: 0;
+    width: 100%; /* Asegura que los enlaces ocupen todo el ancho disponible */
+  }
+
+  .menu a {
+    font-size: 14px; /* Tamaño de fuente más pequeño para los enlaces */
+    margin: 5px 0; /* Margen reducido entre enlaces */
+    text-align: left; /* Alineación a la izquierda para mejor lectura */
+    width: 100%; /* Cada enlace ocupará todo el ancho disponible */
+    padding: 10px; /* Mayor espaciado interno para facilitar la interacción en pantallas táctiles */
+  }
+}

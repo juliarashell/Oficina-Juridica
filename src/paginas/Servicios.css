@@ -1,0 +1,51 @@
+/* Estilos para el título */
+.services-titulo {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 10px 0; /* Reducido para quitar espacio extra */
+  margin-top: 1cm; /* Espacio de 1 cm debajo del banner */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* Cambiar la tipografía */
+  font-size: 50px; /* Tamaño de fuente del título */
+}
+
+/* El contenedor para los servicios */
+.services-container {
+  display: flex; /* Usar flexbox para alinear los elementos en una fila */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias filas */
+  justify-content: space-around; /* Espaciado equitativo entre los servicios */
+  margin: 20px 0; /* Espaciado entre el contenedor y el resto del contenido */
+  text-align: center;
+}
+
+/* Estilos para cada servicio */
+.service-box {
+  flex: 1 1 calc(30% - 20px); /* Permite que cada caja crezca y se encoja, ocupando un 30% del contenedor */
+  margin: 10px; /* Espaciado entre cajas */
+  padding: 15px; /* Espaciado interno */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+  color: #333; /* Color de texto */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.3s ease; /* Suavizar la animación del zoom */
+  width: 100px; /* Ancho fijo igual al de las cajas de la sección anterior */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.service-box:hover {
+  transform: scale(1.05); /* Aumenta el tamaño un 5% */
+}
+
+/* Para asegurar que en pantallas más pequeñas el diseño se mantenga responsivo */
+@media (max-width: 768px) {
+  .service-box {
+    flex: 1 1 calc(45% - 20px); /* Dos cajas en pantallas pequeñas */
+    width: auto; /* Ancho automático para mantener proporciones */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-box {
+    flex: 1 1 100%; /* Una caja en pantallas muy pequeñas */
+    width: auto; /* Ancho automático para mantener proporciones */
+  }
+}
