@@ -75,13 +75,6 @@
   right: 0; /* Alinear al lado derecho */
   width: 100%; /* Asegura que ocupe todo el ancho */
 }
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-  .banner {
-    flex-direction: column; /* Cambia la orientación a columna en pantallas pequeñas */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-    height: auto; /* Permite que el banner se ajuste a su contenido */
-  }
 
   .logo {
     width: 40px; /* Tamaño aún más pequeño del logo en móviles */
@@ -109,4 +102,3 @@
     width: 100%; /* Cada enlace ocupará todo el ancho disponible */
     padding: 10px; /* Mayor espaciado interno para facilitar la interacción en pantallas táctiles */
   }
-}
