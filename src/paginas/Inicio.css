@@ -51,7 +51,7 @@ body {
 @media (max-width: 768px) {
   .inicio-titulo {
     font-size: 30px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
-    margin-top: 2cm; /* Espacio de 1 cm debajo del banner */
+    margin-top: 3cm; /* Espacio de 1 cm debajo del banner */
   }
 }
 
