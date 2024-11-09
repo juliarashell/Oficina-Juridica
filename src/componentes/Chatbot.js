@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'; 
 import './Chatbot.css';
+import { track } from '@vercel/analytics';
+
 
 const Chatbot = () => {
   const [mostrarChat, setMostrarChat] = useState(false);
@@ -18,6 +20,7 @@ const Chatbot = () => {
       setBienvenidaEnviada(false); // Resetear estado de bienvenida enviada
     }
     setMostrarChat(!mostrarChat);
+    track('chatbot_opened');
   };
 
   // Función para enviar mensaje del bot
