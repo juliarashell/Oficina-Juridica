@@ -13,6 +13,9 @@ const Chatbot = () => {
 
   // Función para alternar la ventana del chat
   const toggleChat = () => {
+    if (!mostrarChat) {
+      track('chatbot_opened'); // Solo rastrea cuando el chat se abre
+    }
     if (finalizado) {
       setMensajes([]);  // Limpiar mensajes al finalizar la conversación
       setPreguntaSeleccionada(null); // Reiniciar pregunta seleccionada
@@ -20,7 +23,6 @@ const Chatbot = () => {
       setBienvenidaEnviada(false); // Resetear estado de bienvenida enviada
     }
     setMostrarChat(!mostrarChat);
-    track('chatbot_opened');
   };
 
   // Función para enviar mensaje del bot
@@ -36,6 +38,7 @@ const Chatbot = () => {
   const manejarOpcion = (opcion) => {
     setMensajes((prevMensajes) => [...prevMensajes, { texto: opcion, tipo: 'usuario' }]);
     setPreguntaSeleccionada(opcion);
+    track('chatbot_option_selected', { option: opcion });
     
     switch (opcion) {
       case 'Horario de atención 🕒':
