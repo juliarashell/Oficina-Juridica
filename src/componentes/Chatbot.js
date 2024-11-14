@@ -38,31 +38,36 @@ const Chatbot = () => {
   const manejarOpcion = (opcion) => {
     setMensajes((prevMensajes) => [...prevMensajes, { texto: opcion, tipo: 'usuario' }]);
     setPreguntaSeleccionada(opcion);
-    track('chatbot_option_selected', { option: opcion });
+    
     
     switch (opcion) {
       case 'Horario de atención 🕒':
         enviarMensajeBot('Nuestro horario de atención es de lunes a viernes de 8:00 am a 5:00 pm, y sábados de 8:00 am a 1:00 pm.');
         break;
-      case 'Servicios notariales ⚖️':
-        enviarMensajeBot('Ofrecemos servicios notariales como auténtica de documentos, escrituras públicas, contratos y más. Para más información comunícate con nosotros por WhatsApp:');
-        enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20información%20sobre%20los%20servicios%20notariales">Haz clic aquí para contactarnos por WhatsApp</a>');
-        break;
-      case 'Agendar cita 🗓️':
-        enviarMensajeBot('Para agendar una cita, por favor haz clic en el siguiente enlace para comunicarte con nosotros a través de WhatsApp:');
-        enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20agendar%20una%20cita%20con%20el%20Abogado">Haz clic aquí para agendar tu cita por WhatsApp</a>');
-        break;
-      case 'Ubicación 📍':
-        enviarMensajeBot('Nos encontramos ubicados en: Calle Principal Cantón Norte, San Antonio Huista, Huehuetenango, Guatemala. Para llegar a nuestra oficina, puedes seguir las instrucciones en el siguiente enlace:');
-        enviarMensajeBot('<a href="https://maps.app.goo.gl/omxPoRyfrhH1y3GP6" target="_blank">Abrir en Google Maps</a>');
-        enviarMensajeBot(
-          '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.8304486901147!2d-91.77266402505408!3d15.654014684966993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858c53003375c39f%3A0x8e5618ab084ae7a9!2sOficina%20Jur%C3%ADdica%20Profesional%20Lic.%20Dario%20L%C3%B3pez!5e0!3m2!1ses!2sgt!4v1728152944597!5m2!1ses!2sgt" width="100%" height="200" style="border:0;" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>'
-        );
-        break;
-      case 'Asesoría legal para empresas 💼':
-        enviarMensajeBot('Ofrecemos consultorías legales personalizadas para empresas en cumplimiento normativo. Para más información comunícate con nosotros: ');
-        enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20información%20sobre%20la%20asesoría%20legal%20para%20empresas">Haz clic aquí para contactarnos por WhatsApp</a>');
-        break;
+        
+        case 'Servicios notariales ⚖️':
+          enviarMensajeBot('Ofrecemos servicios notariales como auténtica de documentos, escrituras públicas, contratos y más. Para más información comunícate con nosotros por WhatsApp:');
+          enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20información%20sobre%20los%20servicios%20notariales" target="_blank" rel="noopener noreferrer">Haz clic aquí para contactarnos por WhatsApp</a>');
+          break;
+        
+        case 'Agendar cita 🗓️':
+          enviarMensajeBot('Para agendar una cita, por favor haz clic en el siguiente enlace para comunicarte con nosotros a través de WhatsApp:');
+          enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20agendar%20una%20cita%20con%20el%20Abogado" target="_blank" rel="noopener noreferrer">Haz clic aquí para agendar tu cita por WhatsApp</a>');
+          break;
+        
+        case 'Ubicación 📍':
+          enviarMensajeBot('Nos encontramos ubicados en: Calle Principal Cantón Norte, San Antonio Huista, Huehuetenango, Guatemala. Para llegar a nuestra oficina, puedes seguir las instrucciones en el siguiente enlace:');
+          enviarMensajeBot('<a href="https://maps.app.goo.gl/omxPoRyfrhH1y3GP6" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>');
+          enviarMensajeBot(
+            '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.8304486901147!2d-91.77266402505408!3d15.654014684966993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858c53003375c39f%3A0x8e5618ab084ae7a9!2sOficina%20Jur%C3%ADdica%20Profesional%20Lic.%20Dario%20L%C3%B3pez!5e0!3m2!1ses!2sgt!4v1728152944597!5m2!1ses!2sgt" width="100%" height="200" style="border:0;" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>'
+          );
+          break;
+        
+        case 'Asesoría legal para empresas 💼':
+          enviarMensajeBot('Ofrecemos consultorías legales personalizadas para empresas en cumplimiento normativo. Para más información comunícate con nosotros: ');
+          enviarMensajeBot('<a href="https://wa.me/50251706998?text=Hola,%20quiero%20información%20sobre%20la%20asesoría%20legal%20para%20empresas" target="_blank" rel="noopener noreferrer">Haz clic aquí para contactarnos por WhatsApp</a>');
+          break;
+        
       default:
         break;
     }
@@ -130,7 +135,7 @@ const Chatbot = () => {
           </div>
         ))}
 
-        {/* Mostrar el mensaje "escribiendo..." si es necesario */}
+        {/* Mostrar el mensaje "escribiendo..."  */}
         {escribiendo && (
           <div className="mensaje bot escribiendo">
             <p>Escribiendo...</p>

@@ -16,13 +16,14 @@
   animation: fadeIn 0.5s ease;
   border: 1px solid #84fdf9cf;
   justify-content: space-between; /* Para asegurar que el texto y el botón de cerrar se separen */
+  z-index: 1; /* Debajo de la ventana del chatbot */
   
 }
 
 /* Colita del mensaje (abajo a la derecha) */
 .chatbot-message::after {
   content: '';
-  position: absolute;
+  position: fixed;
   bottom: -10px;
   right: 20px;
   border-width: 10px 0 0 10px;
