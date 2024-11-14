@@ -1,6 +1,6 @@
 /* Estilos del mensaje emergente del chatbot */
 .chatbot-message {
-  position: absolute; /* Cambia relative por absolute para más control */
+  position: fixed; /* Cambia relative por absolute para más control */
   bottom: 50px; /* Ajusta el valor */
   right: 100px; /* Ajusta el valor */
   background-color: #fff;
@@ -23,7 +23,7 @@
 /* Colita del mensaje (abajo a la derecha) */
 .chatbot-message::after {
   content: '';
-  position: fixed;
+  position: absolute;
   bottom: -10px;
   right: 20px;
   border-width: 10px 0 0 10px;
